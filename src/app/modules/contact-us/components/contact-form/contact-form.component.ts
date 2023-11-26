@@ -22,12 +22,19 @@ export class ContactFormComponent {
       Validators.minLength(3),
     ]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    phone: new FormControl('', [Validators.required, Validators.email]),
+    phone: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/[0-9]+/),
+      Validators.minLength(9),
+    ]),
     message: new FormControl('', [
       Validators.required,
       Validators.pattern(/^[ء-يa-zA-Z\d ]+$/),
     ]),
   });
+
+
+  
 
   formSubmit(contactInfo: any) {
     this.formSubmited = true;
