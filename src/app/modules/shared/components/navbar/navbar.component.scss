@@ -4,9 +4,11 @@ nav {
 
 .nav-scroll {
   background-color: rgba(0, 0, 0, 0.8) !important;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.59);
+  box-shadow: 0px 0px 6px 0px rgba(255, 163, 163, 0.59);
   -webkit-box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.59);
   -moz-box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.59);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #nav .nav-link {
@@ -19,7 +21,7 @@ nav {
 }
 
 #nav .navbar-brand-image {
-  width: 100px !important;
+  width: 110px !important;
 }
 
 @media (min-width: 992px){
@@ -28,7 +30,7 @@ nav {
     font-size: 23px !important;
   }
   .navbar-brand-image {
-    width: 80px !important;
+    width: 90px !important;
   }
   .navbar-nav{
   margin-right: 15rem;
@@ -113,7 +115,7 @@ nav {
     margin-top: 5px;
   }
   #nav .navbar-brand-image {
-    width: 55px !important;
+    width: 75px !important;
   }
   #nav.navbar-collapse ul li {
     margin: 5px 0 !important;

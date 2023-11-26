@@ -55,3 +55,20 @@ h2 {
     width: 50px;
   }
 }
+
+.text-white {
+  color: FFF;
+}
+
+.custom-title .text-white::before,
+.custom-title .text-white::after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 100px;
+  background-color: #FFF;
+  margin-right: 10px;
+  margin-left: 10px;
+}

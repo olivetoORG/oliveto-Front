@@ -1,7 +1,14 @@
+.menu-carousel {
+  background-color: var(--Main-Brand-Color);
+}
+
 .menu-carousel .item {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 10px;
+  box-shadow: -22px 12px 57px rgba(34, 38, 74, -0.9);
 }
 
 .menu-carousel .caption {
@@ -27,6 +34,7 @@
 
 .item-img {
   transition: all 0.4s;
+  
 }
 
 .item:hover .item-img {
