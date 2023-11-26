@@ -31,6 +31,9 @@ export class MainServiceService {
     formData.append('name', data.name);
     formData.append('email', data.email);
     formData.append('message', data.message);
+    formData.append('phone', data.phone);
+    formData.append('file', data.file);
+
     return this.http.post<any>(`${this.baseUrl}/contact_us`, formData);
   }
 }
