@@ -82,6 +82,7 @@ html {
 
   .owl-theme .owl-nav {
     width: 15rem !important;
+    margin: 0 auto;
   }
 
   .owl-theme .owl-nav [class*="owl-"] {
@@ -129,7 +130,7 @@ html {
   width: 20px;
   height: 20px;
   margin: 5px 7px;
-  background: transparent !important;
+  background: #FFF !important;
   display: block;
   -webkit-backface-visibility: visible;
   transition: opacity 0.2s ease;
@@ -148,9 +149,8 @@ html {
 }
 
 .owl-theme .owl-nav {
-  margin-top: 10px;
+  margin-top: 30px;
   width: 23rem;
-
   .btn-check:checked + .btn,
   .btn.active,
   .btn.show,
@@ -158,9 +158,16 @@ html {
   :not(.btn-check) + .btn:active {
     border: none !important;
   }
-
-
 }
+
+.owl-theme .owl-nav .owl-prev {
+  background-color: #FFF;
+}
+
+.owl-theme .owl-nav .owl-next {
+  background-color: #FFF;
+}
+
 .modal {
   --bs-modal-bg: transparent !important;
   --bs-modal-border-color: transparent !important ;

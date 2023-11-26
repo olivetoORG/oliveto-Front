@@ -7,7 +7,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: -22px 12px 57px rgba(34, 38, 74, -0.9);
 }
 
@@ -20,6 +20,7 @@
   transition: all 0.3s;
   padding: 50px;
   backdrop-filter: blur(5px);
+  border-radius: 5px;
 }
 
 .menu-carousel .item:hover .caption {

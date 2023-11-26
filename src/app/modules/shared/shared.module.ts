@@ -13,6 +13,7 @@ import { BgDivComponent } from './components/bg-div/bg-div.component';
 import { CustomSecondSectionComponent } from './components/custom-second-section/custom-second-section.component';
 import { RouterModule } from '@angular/router';
 import { ScrollButtonComponent } from './components/scroll-button/scroll-button.component';
+import { PageLoaderComponent } from './components/page-loader/page-loader.component';
 
 const declarations = [
   FooterComponent,
@@ -27,6 +28,7 @@ const declarations = [
   BgDivComponent,
   CustomSecondSectionComponent,
   ScrollButtonComponent,
+  PageLoaderComponent
 ];
 @NgModule({
   declarations: [...declarations],

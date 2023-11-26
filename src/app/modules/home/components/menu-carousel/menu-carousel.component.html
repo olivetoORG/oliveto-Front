@@ -8,26 +8,27 @@
   </div>
 </div> -->
 
-<section class="menu-carousel section-padding">
-  <app-section-title [title]="'الأطباق المميزة'" ngClass="text-white" [isTextWhite]="true"></app-section-title>
-  <div class="container-fluid">
-    <owl-carousel-o [options]="customOptions" #owlCar>
-      <ng-container *ngFor="let product of productsList ; let i = index">
-        <ng-container *ngIf="product?.image">
-          <ng-template carouselSlide>
-            <div class="item mx-2" dir="rtl">
-              <img [src]="product?.image" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid item-img">
-              <div class="caption bg-secondry-color text-center text-lg-end">
-                <h3 class="main-text-color" style="font-weight: 700 !important;">{{ product?.name }}
-                </h3>
-                <p class="main-color" style="font-weight: 700 !important;"> {{ product?.category_name }}</p>
+<ng-container *ngIf="isDataLoaded">
+  <section class="menu-carousel section-padding">
+    <app-section-title [title]="'الأطباق المميزة'" ngClass="text-white" [isTextWhite]="true"></app-section-title>
+    <div class="container-fluid">
+      <owl-carousel-o [options]="customOptions" #owlCar>
+        <ng-container *ngFor="let product of productsList ; let i = index">
+          <ng-container *ngIf="product?.image">
+            <ng-template carouselSlide>
+              <div class="item mx-2" dir="rtl">
+                <img [src]="product?.image" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid item-img">
+                <div class="caption bg-secondry-color text-center text-lg-end">
+                  <h3 class="main-text-color" style="font-weight: 700 !important;">{{ product?.name }}
+                  </h3>
+                  <p class="main-color" style="font-weight: 700 !important;"> {{ product?.category_name }}</p>
+                </div>
               </div>
-            </div>
-          </ng-template>
+            </ng-template>
+          </ng-container>
         </ng-container>
-      </ng-container>
 
-      <!-- <ng-template carouselSlide>
+        <!-- <ng-template carouselSlide>
         <div class="item mx-2" dir="rtl">
           <img src="assets/home/menu-1.webp" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid w-100 item-img">
           <div class="caption bg-secondry-color text-center text-lg-end">
@@ -82,6 +83,11 @@
         </div>
       </ng-template> -->
 
-    </owl-carousel-o>
-  </div>
-</section>
+      </owl-carousel-o>
+    </div>
+  </section>
+</ng-container>
+
+<ng-container *ngIf="!isDataLoaded">
+  <app-page-loader></app-page-loader>
+</ng-container>

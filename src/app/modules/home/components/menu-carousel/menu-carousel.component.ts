@@ -9,6 +9,7 @@ import { MainServiceService } from 'src/app/services/main-service.service';
 })
 export class MenuCarouselComponent implements OnInit {
   productsList: any[] = [];
+  isDataLoaded: Boolean = false;
 
   constructor(private mainService: MainServiceService) {}
   customOptions: OwlOptions = {
@@ -59,8 +60,12 @@ export class MenuCarouselComponent implements OnInit {
             resolve(true);
           }
         },
-        error: (error) => {},
+        error: (error) => {
+          this.isDataLoaded = false
+        },
       });
-    }).then(() => {});
+    }).then(() => {
+      this.isDataLoaded = true;
+    });
   }
 }
