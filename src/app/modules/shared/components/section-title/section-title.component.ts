@@ -9,4 +9,5 @@ export class SectionTitleComponent {
   @Input() title: string = '';
   @Input() sectionTitleClass: boolean = false;
   @Input() sectionPaddingClass: boolean = false;
+  @Input() isTextWhite: boolean = false;
 }

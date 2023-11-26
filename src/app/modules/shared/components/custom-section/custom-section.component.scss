@@ -20,7 +20,8 @@
 }
 
 .custom-section .img-container img {
-  width: 60% !important;
+  width: 75% !important;
+  box-shadow: -22px 12px 57px rgba(34, 38, 74, -0.9);
 }
 @media (max-width: 992px) {
   .font-s {
@@ -39,7 +40,7 @@
   }
 
   .img-fluid {
-    width: 70%;
+    width: 60%;
   }
   .custom-section h2::before,
   .custom-section h2::after {
@@ -85,7 +86,7 @@
   }
 
   .custom-section .img-container img {
-    width: 80% !important;
+    width: 100% !important;
   }
 }
 
@@ -109,3 +110,5 @@
     width: 90% !important;
   }
 }
+
+

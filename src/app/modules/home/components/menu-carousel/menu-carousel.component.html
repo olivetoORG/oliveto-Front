@@ -9,7 +9,7 @@
 </div> -->
 
 <section class="menu-carousel section-padding">
-  <app-section-title [title]="'الأطباق المميزة'"></app-section-title>
+  <app-section-title [title]="'الأطباق المميزة'" ngClass="text-white" [isTextWhite]="true"></app-section-title>
   <div class="container-fluid">
     <owl-carousel-o [options]="customOptions" #owlCar>
       <ng-container *ngFor="let product of productsList ; let i = index">

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Lightbox, LightboxConfig } from 'ngx-lightbox';
 import { MainServiceService } from 'src/app/services/main-service.service';
 
@@ -21,7 +22,9 @@ export class GalleryComponent {
   constructor(
     private _lightboxConfig: LightboxConfig,
     private _lightbox: Lightbox,
-    private mainService: MainServiceService
+    private mainService: MainServiceService,
+    private meta: Meta,
+    private titleService: Title
   ) {
     // override default config
     this._lightboxConfig.centerVertically = true;
@@ -43,6 +46,8 @@ export class GalleryComponent {
       error: (error) => {
       },
     });
+    this.meta.updateTag({ name: 'description', content: ' صور المطعم | مطعم أوليفيتو فى ظهرة لبن. استمتع بتجربة تناول الطعام في أفضل مطعم في ظهرة لبن، المملكة العربية السعودية. نقدم أطباق شهية مستوحاة من المأكولات التقليدية، تتميز بالنكهات الفريدة والمكونات الطازجة. اكتشف أجواء راقية وخدمة عالية الجودة. زورونا اليوم لتستمتعوا بتجربة تناول الطعام الاستثنائية في ظهرة لبن' });
+    this.titleService.setTitle('الألبوم | مطعم أوليفيتو ظهرة لبن');
   }
 
   constructAlbums(): void {
