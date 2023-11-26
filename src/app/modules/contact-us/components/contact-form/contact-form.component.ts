@@ -10,11 +10,14 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ContactFormComponent {
   formSubmited: boolean = false;
+  selectedFile: File | null = null;
+  allowedExtensions = ['.png', '.jpg', '.jpeg', '.heic', '.heif', '.hevc '];
 
   constructor(
     private mainService: MainServiceService,
     private toasterService: ToastrService
   ) {}
+
   contactForm: FormGroup = new FormGroup({
     name: new FormControl('', [
       Validators.required,
@@ -31,10 +34,86 @@ export class ContactFormComponent {
       Validators.required,
       Validators.pattern(/^[ء-يa-zA-Z\d ]+$/),
     ]),
+    file: new FormControl(''),
   });
 
+  public get name() {
+    return this.contactForm.get('name');
+  }
+  public get email() {
+    return this.contactForm.get('email');
+  }
+  public get phone() {
+    return this.contactForm.get('phone');
+  }
+  public get message() {
+    return this.contactForm.get('message');
+  }
 
-  
+  // onFileSelected(event: any): void {
+  //   const file = event.target.files[0] as File;
+  //   if (this.isFileExtensionAllowed(file)) {
+  //     this.selectedFile = file;
+  //     this.contactForm.patchValue({
+  //       file: this.selectedFile,
+  //     });
+  //   } else {
+  //     // Display an error message to the user or prevent further action
+  //     this.toasterService.error(
+  //       'الرجاء إرفاق الملف بالإمتدادات المسموح بها مثل "jpg , jpeg , png , heic"',
+  //       'خطأ',
+  //       {
+  //         tapToDismiss: false,
+  //         positionClass: 'toast-top-left',
+  //       }
+  //     );
+  //     this.clearFileInput();
+  //   }
+  // }
+
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const file = input.files && input.files.length > 0 ? input.files[0] : null;
+
+    if (file && this.isFileExtensionAllowed(file)) {
+      this.selectedFile = file;
+      this.contactForm.patchValue({
+        file: this.selectedFile,
+      });
+    } else {
+      this.selectedFile = null;
+      this.toasterService.error(
+        'الرجاء إرفاق الملف بالإمتدادات المسموح بها مثل "jpg , jpeg , png , heic"',
+        'خطأ',
+        {
+          tapToDismiss: false,
+          positionClass: 'toast-top-left',
+        }
+      );
+      this.clearFileInput();
+    }
+  }
+
+  private isFileExtensionAllowed(file: File): boolean {
+    if (!file) {
+      return false;
+    }
+
+    const fileType = file.name.toLowerCase();
+    return this.allowedExtensions.some((ext) => fileType.endsWith(ext));
+  }
+
+  private clearFileInput(): void {
+    // Clear the file input to reset selection
+    const fileInput = document.getElementById('fileInput') as HTMLInputElement;
+    if (fileInput) {
+      fileInput.value = '';
+    }
+    this.selectedFile = null;
+    this.contactForm.patchValue({
+      file: '',
+    });
+  }
 
   formSubmit(contactInfo: any) {
     this.formSubmited = true;
@@ -57,5 +136,6 @@ export class ContactFormComponent {
         }
       );
     }
+    // console.log(contactInfo.value);
   }
 }
