@@ -1,0 +1,95 @@
+.font-s {
+  line-height: 2rem;
+  font-size: 22px;
+  font-weight: 700 !important;
+}
+
+.font-l {
+  line-height: 2.8rem;
+  font-size: 25px;
+  font-weight: 700 !important;
+}
+
+.custom-second-section h2 {
+  font-size: 35px;
+  font-weight: 800 !important;
+}
+
+.w1 {
+  width: 80% !important;
+}
+
+.w2 {
+  width: 80% !important;
+}
+
+@media (max-width: 992px) {
+  .font-s {
+    line-height: 2rem;
+    font-size: 20px;
+    font-weight: 700 !important;
+  }
+
+  .font-l {
+    line-height: 2.8rem;
+    font-size: 20px;
+    font-weight: 700 !important;
+  }
+
+  .custom-second-section h2 {
+    font-size: 28px;
+  }
+
+  .w1 {
+    width: 60% !important;
+  }
+
+  .w2 {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .font-s {
+    line-height: 1.8rem;
+    font-size: 16px;
+  }
+
+  .font-l {
+    line-height: 2rem;
+    font-size: 16px;
+  }
+
+  .custom-second-section h2 {
+    font-size: 22px;
+  }
+
+  .w1 {
+    width: 80% !important;
+  }
+
+  .w2 {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1700px) {
+  .font-s {
+    line-height: 2rem;
+    font-size: 16px;
+  }
+
+  .font-l {
+    line-height: 2.5rem;
+    font-size: 22px;
+    font-weight: 700 !important;
+  }
+
+  .custom-second-section h2 {
+    font-size: 30px;
+  }
+
+  .img-fluid {
+    width: 90%;
+  }
+}

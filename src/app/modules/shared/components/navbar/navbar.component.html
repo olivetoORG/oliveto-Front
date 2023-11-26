@@ -1,0 +1,67 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-transparent bg-transparent fixed-top" dir="rtl">
+    <div class="container flex-column">
+        <div class="logo d-flex justify-content-center">
+            <a class="navbar-brand d-flex justify-content-center" [routerLink]="['']"><img src="assets/logo2.ico"
+                    class="img-fluid mx-auto cursor-pointer d-none d-xl-block d-lg-block" style="width: 35%;" alt="oliveto" loading="lazy"></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mt-5 mt-lg-0 mt-xl-0" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item mx-4">
+                    <a class="nav-link fs-4 text-white" [routerLink]="['']" [routerLinkActive]="['active']" [ngClass]="{'text-orange': isActive('/')}">الصفحة الرئيسية</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link fs-4 text-white" [routerLink]="['about']" [routerLinkActive]="['active']" [ngClass]="{'text-orange': isActive('/about')}">من نحن</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link fs-4 text-white" [routerLink]="['menu']" [routerLinkActive]="['active']" [ngClass]="{'text-orange': isActive('/menu')}">قائمة الطعام</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link fs-4 text-white" [routerLink]="['contact']" [routerLinkActive]="['active']" [ngClass]="{'text-orange': isActive('/contact')}">تواصل معنا</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-transparent bg-transparent fixed-top" id="nav" dir="rtl">
+  <div class="mx-4 mx-lg-0 container-fluid py-1">
+    <div class="d-flex justify-content-between align-items-center container-size">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand d-flex justify-content-end justify-content-lg-start w-100"
+        [routerLink]="['']"><img src="assets/logo2.ico" class="img-fluid cursor-pointer navbar-brand-image"
+          style="width: 25%;" alt="مطعم أوليفيتو ظهرة لبن" loading="lazy"></a>
+    </div>
+    <div class="collapse navbar-collapse me-0 ms-5" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2">
+        <li class="nav-item me-5 me-lg-0 ">
+          <a class="nav-link text-white py-1 py-lg-2" [routerLink]="['']" [routerLinkActive]="['active']"
+            [ngClass]="{'text-orange': isActive('/')}">الصفحة الرئيسية</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link text-white py-1 py-lg-2" [routerLink]="['about']" [routerLinkActive]="['active']"
+            [ngClass]="{'text-orange': isActive('/about')}">من نحن</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link text-white py-1 py-lg-2" [routerLink]="['menu']" [routerLinkActive]="['active']"
+            [ngClass]="{'text-orange': isActive('/menu')}">قائمة الطعام</a>
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link text-white py-1 py-lg-2" [routerLink]="['gallery']" [routerLinkActive]="['active']"
+            [ngClass]="{'text-orange': isActive('/gallery')}">الألبوم</a>
+        </li>
+        <li class="nav-item ms-5 me-5">
+          <a class="nav-link text-white py-1 py-lg-2" [routerLink]="['contact']" [routerLinkActive]="['active']"
+            [ngClass]="{'text-orange': isActive('/contact')}">تواصل معنا</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>

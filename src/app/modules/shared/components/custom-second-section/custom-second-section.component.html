@@ -1,0 +1,32 @@
+<section class="custom-second-section section-padding">
+  <div class="container-fluid" [style.backgroundColor]="sectionBackgroundColor">
+    <div class="row align-items-center justify-content-start ">
+      <div class="order-2 order-lg-1" [ngClass]="customColClass?'col-md-12 col-lg-6':'col-md-7'">
+        <div class="row justify-content-end align-items-center align-items-md-start">
+          <div class="col-12"
+            [ngClass]="customColsClass?'col-lg-12 col-xl-11 px-2 ps-md-4 pe-md-0 px-md-5':'col-lg-10 col-xl-8'">
+            <div class="section-content text-center text-lg-end" dir="rtl">
+              <div class="">
+                <h2 class="fw-bolder mt-3 mt-lg-0 mb-3 mb-lg-3 section-title" [style.color]="sectionTitleColor">
+                  {{ sectionTitle }}
+                </h2>
+              </div>
+              <p class="fw-bold px-1" [style.color]="sectionDescColor" [style.fontSize.px]="sectionDescSize"
+                [ngClass]="customFontClass?'font-s':'font-l'">
+                {{ sectionDesc }}
+              </p>
+              <ng-content select="[button]"></ng-content>
+              <ng-content select="[working]"></ng-content>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-0 order-1 order-lg-2" [ngClass]="customColClass?'col-md-12 col-lg-6':'col-md-5'">
+        <div class="img-container text-center text-md-end" [ngClass]="customAlignClass?'text-md-center':'text-md-end'">
+          <img [src]="imgsrc" alt="oliveto image" class="img-fluid text-end" loading="lazy"
+            [ngClass]="customimgWidthClass?'w1':'w2'">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

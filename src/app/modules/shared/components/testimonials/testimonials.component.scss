@@ -1,0 +1,72 @@
+.carousel-inner {
+  min-height: 220px;
+}
+.carousel-button {
+  background-color: transparent !important;
+  color: var(--Main-Brand-Color);
+  border: 1px var(--Main-Brand-Color) solid !important;
+  border-radius: 50%;
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel-button:hover {
+  color: var(--Text-Color) !important;
+  background-color: var(--Main-Sec-Brand-Color) !important;
+}
+
+.carousel-button:active {
+  border: 1px var(--Main-Brand-Color) solid !important;
+}
+
+.client-testimonal p {
+  font-size: 30px !important;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.quote-svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.quote-svg-one {
+  right: 15%;
+}
+.quote-svg-two {
+  left: 15%;
+}
+
+.quote-svg-position {
+  transform: rotateY(180deg) translateY(-50%);
+}
+
+@media (max-width: 992px) {
+  .quote-svg-one {
+    right: 5%;
+  }
+  .quote-svg-two {
+    left: 5%;
+  }
+  .client-testimonal p {
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .client-testimonal p {
+    font-size: 20px !important;
+  }
+
+  .quote-svg {
+    display: none !important;
+  }
+}

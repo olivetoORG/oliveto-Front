@@ -1,0 +1,138 @@
+footer {
+  line-height: 4rem !important;
+}
+.social-box {
+  color: var(--Text-Color) !important;
+  background-color: var(--Main-Brand-Color) !important;
+  font-size: 30px !important ;
+}
+.footer-border {
+  border-top: 3px var(--Main-Border-Color) solid !important;
+  border-bottom: 3px var(--Main-Border-Color) solid !important;
+}
+
+.footer-socials ul li {
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  background-color: var(--Main-Brand-Color);
+  color: var(--Text-Color);
+  font-size: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-socials ul li:hover {
+  background-color: var(--Main-Sec-Brand-Color);
+}
+
+.footer-socials ul {
+  display: flex;
+  list-style: none;
+}
+
+.footer-img img {
+  width: 80% !important;
+}
+
+@media (min-width: 1280px) {
+  .footer-socials ul li {
+    font-size: 26px !important;
+    height: 50px;
+    width: 50px;
+  }
+
+  .footer-img img {
+    width: 70% !important;
+  }
+
+  footer {
+    line-height: 3.5rem !important;
+  }
+
+  footer li,
+  span {
+    font-size: 26px !important;
+  }
+  .footer-bottom .copy-right-p {
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+  .footer-socials ul li {
+    font-size: 18px !important;
+    height: 40px;
+    width: 40px;
+  }
+
+  .footer-img img {
+    width: 90% !important;
+  }
+
+  footer {
+    line-height: 3rem !important;
+  }
+
+  footer li,
+  span {
+    font-size: 20px !important;
+  }
+  .footer-bottom .copy-right-p {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-socials ul li {
+    font-size: 20px !important;
+    height: 40px;
+    width: 40px;
+  }
+
+  .footer-img img {
+    width: 30% !important;
+  }
+
+  footer {
+    line-height: 3.5rem !important;
+  }
+
+  footer li,
+  span {
+    font-size: 28px !important;
+  }
+  .footer-bottom .copy-right-p {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-socials ul li {
+    font-size: 18px !important;
+    height: 35px;
+    width: 35px;
+  }
+
+  .footer-img img {
+    width: 25% !important;
+  }
+
+  footer {
+    line-height: 2.5rem !important;
+  }
+
+  footer li,
+  span {
+    font-size: 18px !important;
+  }
+
+  .footer-bottom .copy-right-p {
+    font-size: 12px !important;
+  }
+}

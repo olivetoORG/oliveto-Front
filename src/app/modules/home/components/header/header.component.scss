@@ -1,0 +1,204 @@
+// hero static img css
+
+#hero {
+  height: 100vh;
+  width: 100%;
+  background: url("/assets/home/hero.webp") left center;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+@media (max-width: 991px) {
+  #hero {
+    background: url("/assets/home/Burger.webp") center center !important;
+    height: 95vh !important;
+    background-position: left;
+  }
+
+  .header-content {
+    margin-bottom: 215px;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero {
+    background: url("/assets/home/Burger-phnoe-size.webp") center center !important;
+    height: 80vh !important;
+  }
+
+  .header-content {
+    margin-bottom: 215px;
+  }
+}
+
+#hero .container-fluid {
+  position: relative;
+  text-align: center;
+  width: 85% !important;
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+#hero h1,
+p {
+  text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000,
+    1px 1px 2px #000;
+}
+
+#hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+#hero p {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  #hero h1 {
+    font-size: 45px;
+  }
+
+  #hero p {
+    font-size: 25px;
+  }
+
+
+}
+
+@media (max-width: 767px) {
+  #hero h1 {
+    font-size: 25px;
+  }
+
+  #hero p {
+    font-size: 15px;
+  }
+
+  #hero h1,
+  p {
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000,
+      1px 1px 1px #000;
+  }
+}
+
+// hero slider css
+
+// .carousel-caption {
+//   position: absolute;
+//   top: 50%;
+//   left: 65%;
+//   transform: translate(-50%, -50%);
+//   text-align: end;
+//   color: #fff; /* Adjust text color as needed */
+//   width: 40%;
+// }
+
+// #heroSlider h1,
+// p {
+//   text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000,
+//     1px 1px 2px #000;
+// }
+
+// #heroSlider h1 {
+//   font-size: 60px;
+//   font-weight: 700;
+// }
+
+// #heroSlider p {
+//   font-size: 30px;
+//   font-weight: 700;
+// }
+
+// #heroSlider {
+//   height: 100vh;
+// }
+// #heroSlider .carousel-inner {
+//   height: 100%;
+// }
+// #heroSlider .carousel-item img {
+//   height: 100vh;
+//   object-fit: cover; /* Maintain aspect ratio and fill the space */
+// }
+// @media (min-width: 992px) and (max-width: 1500px) {
+//   #heroSlider h1 {
+//     font-size: 45px;
+//   }
+
+//   #heroSlider p {
+//     font-size: 25px;
+//   }
+//   .carousel-caption {
+//     top: 50%;
+//     left: 60%;
+//     width: 49%;
+//   }
+//     .heroSlider {
+//     height: 100vh !important;
+//   }
+//   .carousel-item img {
+//     height: 100vh !important;
+//     object-fit: cover; /* Maintain aspect ratio and fill the space */
+//   }
+// }
+
+// @media (max-width: 992px) {
+//   #heroSlider h1 {
+//     font-size: 35px;
+//   }
+
+//   #heroSlider p {
+//     font-size: 20px;
+//   }
+//   .carousel-caption {
+//     top: 50%;
+//     left: 50%;
+//     width: 70%;
+//   }
+
+//   .heroSlider {
+//     height: 70vh !important;
+//   }
+//   .carousel-item img {
+//     height: 70vh !important;
+//     object-fit: cover; /* Maintain aspect ratio and fill the space */
+//   }
+// }
+
+// @media (max-width: 767px) {
+//   .heroSlider {
+//     height: 80vh !important;
+//   }
+//   .carousel-inner {
+//     height: 100%;
+//   }
+//   .carousel-item img {
+//     height: 80vh !important;
+//     object-fit: cover; /* Maintain aspect ratio and fill the space */
+//   }
+//   .carousel-caption {
+//     top: 50%;
+//     left: 50%;
+//     width: 70%;
+//   }
+
+//   #heroSlider h1 {
+//     font-size: 25px;
+//   }
+
+//   #heroSlider p {
+//     font-size: 15px;
+//   }
+// }
+
+// #heroSlider .container-fluid {
+//   --bs-gutter-x: 0 !important;
+// }

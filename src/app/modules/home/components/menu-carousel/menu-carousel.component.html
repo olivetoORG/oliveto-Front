@@ -1,0 +1,87 @@
+<!-- <div class="col-md-4">
+  <div class="item">
+    <img src="assets/home/menu-1.webp" alt="" class="img-fluid w-100">
+    <div class="caption bg-white text-center">
+      <h3>item</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+</div> -->
+
+<section class="menu-carousel section-padding">
+  <app-section-title [title]="'الأطباق'"></app-section-title>
+  <div class="container-fluid">
+    <owl-carousel-o [options]="customOptions" #owlCar>
+      <ng-container *ngFor="let product of productsList ; let i = index">
+        <ng-container *ngIf="product?.image">
+          <ng-template carouselSlide>
+            <div class="item mx-2" dir="rtl">
+              <img [src]="product?.image" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid item-img">
+              <div class="caption bg-secondry-color text-center text-lg-end">
+                <h3 class="main-text-color" style="font-weight: 700 !important;">{{ product?.name }}
+                </h3>
+                <p class="main-color" style="font-weight: 700 !important;"> {{ product?.category_name }}</p>
+              </div>
+            </div>
+          </ng-template>
+        </ng-container>
+      </ng-container>
+
+      <!-- <ng-template carouselSlide>
+        <div class="item mx-2" dir="rtl">
+          <img src="assets/home/menu-1.webp" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid w-100 item-img">
+          <div class="caption bg-secondry-color text-center text-lg-end">
+            <h3 class="main-text-color" style="font-weight: 700 !important;">مشكل مشاوي</h3>
+            <p class="main-color" style="font-weight: 700 !important;">وجبات المشويات</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="item mx-2" dir="rtl">
+          <img src="assets/home/menu-1.webp" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid w-100 item-img">
+          <div class="caption bg-secondry-color text-center text-lg-end">
+            <h3 class="main-text-color" style="font-weight: 700 !important;">مشكل مشاوي</h3>
+            <p class="main-color" style="font-weight: 700 !important;">وجبات المشويات</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="item mx-2" dir="rtl">
+          <img src="assets/home/menu-1.webp" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid w-100 item-img">
+          <div class="caption bg-secondry-color text-center text-lg-end">
+            <h3 class="main-text-color" style="font-weight: 700 !important;">مشكل مشاوي</h3>
+            <p class="main-color" style="font-weight: 700 !important;">وجبات المشويات</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="item mx-2" dir="rtl">
+          <img src="assets/home/menu-1.webp" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid w-100 item-img">
+          <div class="caption bg-secondry-color text-center text-lg-end">
+            <h3 class="main-text-color" style="font-weight: 700 !important;">مشكل مشاوي</h3>
+            <p class="main-color" style="font-weight: 700 !important;">وجبات المشويات</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="item mx-2" dir="rtl">
+          <img src="assets/home/menu-1.webp" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid w-100 item-img">
+          <div class="caption bg-secondry-color text-center text-lg-end">
+            <h3 class="main-text-color" style="font-weight: 700 !important;">مشكل مشاوي</h3>
+            <p class="main-color" style="font-weight: 700 !important;">وجبات المشويات</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="item mx-2" dir="rtl">
+          <img src="assets/home/menu-1.webp" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid w-100 item-img">
+          <div class="caption bg-secondry-color text-center text-lg-end">
+            <h3 class="main-text-color" style="font-weight: 700 !important;">مشكل مشاوي</h3>
+            <p class="main-color" style="font-weight: 700 !important;">وجبات المشويات</p>
+          </div>
+        </div>
+      </ng-template> -->
+
+    </owl-carousel-o>
+  </div>
+</section>

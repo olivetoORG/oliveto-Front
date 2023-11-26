@@ -1,0 +1,62 @@
+#contactForm .form-control {
+  background-color: transparent !important;
+  border: 1px solid var(--Main-Brand-Color);
+  border-radius: 0 !important;
+  color: var(--Main-Brand-Color);
+  font-weight: 700;
+  font-size: 1rem !important;
+}
+
+#contactForm ::placeholder {
+  color: var(--Main-Brand-Color);
+  font-weight: 700;
+}
+
+#contactForm :-moz-placeholder {
+  color: var(--Main-Brand-Color);
+}
+
+#contactForm ::-webkit-input-placeholder {
+  color: var(--Main-Brand-Color);
+}
+
+#contactForm :-ms-input-placeholder {
+  color: var(--Main-Brand-Color);
+}
+#contactForm .form-control:focus {
+  // border-color: var(--Main-Brand-Color);
+  box-shadow: 0 0 0 0.1rem var(--Main-Brand-Color);
+}
+
+#contactForm input:-webkit-autofill,
+#contactForm input:-webkit-autofill:hover,
+#contactForm input:-webkit-autofill:focus,
+#contactForm input:-webkit-autofill:focus-visible,
+#contactForm textarea:-webkit-autofill,
+#contactForm textarea:-webkit-autofill:hover,
+#contactForm textarea:-webkit-autofill:focus {
+  border: 1px solid var(--Main-Brand-Color) !important;
+  -webkit-text-fill-color: var(--Main-Brand-Color) !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+#contactForm li {
+  font-size: 25px;
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 767px) {
+  #contactForm li {
+    font-size: 18px;
+  }
+  #contactForm .form-control {
+    font-size: 1rem !important;
+  }
+
+}

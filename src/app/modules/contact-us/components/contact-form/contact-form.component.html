@@ -1,0 +1,67 @@
+<form [formGroup]="contactForm" role="group" class="mb-4 mb-lg-0" dir="rtl" id="contactForm"
+  (ngSubmit)="formSubmit(contactForm)">
+  <div class="row">
+    <div class="col-md-6 form-group mb-4">
+      <input type="text" class="form-control" placeholder="الإسم" name="name" id="name" aria-label="الإسم"
+        formControlName="name">
+      <ng-container *ngIf="contactForm.get('name')?.['touched'] || formSubmited">
+        <div class="text-danger mb-2" *ngIf="contactForm.get('name')?.errors?.['required']">
+          <img loading="lazy" class="ms-2 mb-1" src="assets/invalid.svg" width="16" height="16"
+            alt="invalid data icon" />
+          الإسم بالكامل مطلوب
+        </div>
+        <div class="text-danger mb-2" *ngIf="contactForm.get('name')?.errors?.['minlength']">
+          <img loading="lazy" class="ms-2 mb-1" src="assets/invalid.svg" width="16" height="16"
+            alt="invalid data icon" />
+          الإسم بالكامل يجب ألا يقل عن 3 احرف </div>
+      </ng-container>
+    </div>
+    <div class="col-md-6 form-group mb-4">
+      <input type="text" class="form-control" placeholder="الإيميل" name="email" id="email" aria-label="الإيميل"
+        formControlName="email">
+      <ng-container *ngIf="contactForm.get('email')?.['touched'] || formSubmited">
+        <div class="text-danger mb-2" *ngIf="contactForm.get('email')?.errors?.['required']">
+          <img loading="lazy" class="ms-2 mb-1" src="assets/invalid.svg" width="16" height="16"
+            alt="invalid data icon" />
+          البريد الإلكترونى مطلوب
+        </div>
+        <div class="text-danger mb-2" *ngIf="contactForm.get('email')?.errors?.['email']">
+          <img loading="lazy" class="ms-2 mb-1" src="assets/invalid.svg" width="16" height="16"
+            alt="invalid data icon" />
+          يجب أن يكون البريد الإلكتروني عنوان بريد إلكتروني صحيح البُنية
+        </div>
+      </ng-container>
+    </div>
+    <div class="col-md-12 form-group mb-4">
+      <input type="text" class="form-control" placeholder="رقم الجوال" name="number" id="number" aria-label="رقم الجوال"
+        formControlName="phone">
+      <ng-container *ngIf="contactForm.get('phone')?.['touched'] || formSubmited">
+        <div class="text-danger mb-2" *ngIf="contactForm.get('phone')?.errors?.['required']">
+          <img loading="lazy" class="ms-2 mb-1" src="assets/invalid.svg" width="16" height="16"
+            alt="invalid data icon" />
+          البريد الإلكترونى مطلوب
+        </div>
+        <div class="text-danger mb-2" *ngIf="contactForm.get('email')?.errors?.['email']">
+          <img loading="lazy" class="ms-2 mb-1" src="assets/invalid.svg" width="16" height="16"
+            alt="invalid data icon" />
+          يجب أن يكون البريد الإلكتروني عنوان بريد إلكتروني صحيح البُنية
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="form-group col-md-12 mb-4">
+    <textarea class="form-control" name="message" placeholder="رسالة" name="message" id="message" aria-label="رسالة"
+      rows="5" formControlName="message"></textarea>
+    <ng-container *ngIf="contactForm.get('message')?.['touched'] || formSubmited">
+      <div class="text-danger mb-2" *ngIf="contactForm.get('message')?.errors?.['required']">
+        <img loading="lazy" class="ms-2 mb-1" src="assets/invalid.svg" width="16" height="16" alt="invalid data icon" />
+        حقل الرسالة مطلوب </div>
+    </ng-container>
+  </div>
+
+
+  <div class="col-md-12 mt-3 text-center text-lg-start">
+    <app-normal-button [buttonName]="'تواصل معنا'" [buttonBackgroundColor]="'#e75e25'" [buttonType]="'submit'">
+    </app-normal-button>
+  </div>
+</form>

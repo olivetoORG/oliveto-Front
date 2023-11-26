@@ -1,0 +1,72 @@
+<section class="section-padding" id="menuSection">
+  <div class="container" dir="rtl">
+    <div class="row justify-content-start align-items-start">
+
+      <div class="col-lg-6 pt-4 pb-5 normal-section" *ngFor="let category of categoryList; let i = index"
+        [class.diff-menu-section]="!((i % 4 == 0)||(i % 4 == 1))">
+        <div class="container">
+          <div class="row title-row mb-5">
+            <div class="menu-title d-flex justify-content-between align-items-center">
+              <h2 class="text-center ps-3"> {{ category?.name }}</h2>
+              <img [src]="category?.image" alt="مطعم أوليفيتو ظهرة لبن" class="img-fluid"
+                style="width: 20% !important;">
+            </div>
+          </div>
+          <div class="row justify-content-around align-items-center mb-2 mb-md-5">
+            <div class="col-4"></div>
+            <div class="col-3"></div>
+            <ng-container *ngIf="category.products[i]?.min_price && category.products[i]?.max_price">
+              <div class="col-2 person-kilo text-center">
+                النفر
+              </div>
+              <div class="col-2 person-kilo text-center">
+                الكيلو
+              </div>
+            </ng-container>
+            <ng-container *ngIf="!category.products[i]?.min_price && !category.products[i]?.max_price">
+              <div class="col-2 person-kilo text-center">
+                السعر
+              </div>
+            </ng-container>
+
+
+            <div class="col-2 person-kilo" *ngIf="!category.products[i]?.min_price && !category.products[i]?.max_price">
+            </div>
+          </div>
+          <div class="row justify-content-between align-items-center mb-3" *ngFor="let product of category.products">
+            <div class="col-5 ps-0">
+              <div class="item-container">
+                <h3 class="mb-0">{{ product?.name }}</h3>
+                <span class="calories">{{ product?.calories }} سعرة حرارية</span>
+              </div>
+            </div>
+            <div class="col-2 overflow-hidden px-0">....................................................
+            </div>
+
+            <ng-container *ngIf="product?.min_price || product?.max_price">
+              <div class="col-2 text-center" *ngIf="product.min_price">
+                <span class="person-kilo">{{ product?.min_price }}</span>
+              </div>
+
+              <div class="col-2 text-center" *ngIf="product.max_price">
+                <span class="person-kilo">{{ product?.max_price }}</span>
+              </div>
+            </ng-container>
+
+            <ng-container *ngIf="!product?.max_price && !product?.min_price">
+              <div class="col-2 text-center">
+                <span class="person-kilo">{{ product?.medium_price }}</span>
+              </div>
+              <div class="col-2 text-center">
+                <span class="person-kilo"></span>
+              </div>
+            </ng-container>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<app-page-header [pageTitle]="'من نحن'" [sectionBackgroundImg]="'/assets/home/hero.webp'"></app-page-header>
+
+<app-custom-second-section [sectionTitle]="'ساعات العمل'" [imgsrc]="'assets/about/about-3.webp'"
+  [sectionTitle]="'مرحبًا بك في مطعمنا الرائع في ظهرة لبن!'"
+  [sectionDesc]="'نحن نرحب بالعائلات والأصدقاء والزملاء لتجربة تذوق الأطباق الشهية في مطعمنا. كما نقدم خدمات الطعام للمناسبات الخاصة والأحداث. احجز طاولتك الآن واستمتع بتجربة تذوق لا تُنسى. تفضل بزيارتنا اليوم واكتشف مذاق الأكلات الشهية في قلب ظهرة لبن. إننا واثقون من أنك ستتركنا بابتسامة على وجهك ورغبة في العودة مرة أخرى.'"
+  [sectionDescColor]="'#56534F'" [sectionTitleColor]="'#DF5D27'" [customFontClass]="false" [customColClass]="true"
+  [customColsClass]="true" [customAlignClass]="true" [customimgWidthClass]="true">
+  <span button class="ms-lg-5 mt-lg-5 d-flex justify-content-center justify-content-lg-end align-items-center">
+    <app-normal-button [buttonBackgroundColor]="'#6E110BD1'" [buttonName]="'المزيد'" (routerLinkAction)="navigateTo()">
+    </app-normal-button>
+  </span>
+</app-custom-second-section>
+
+<app-custom-section [imgsrc]="'assets/home/home-photo3.webp'" [sectionTitle]="'ساعات العمل'"
+  [sectionDesc]="'نحرص على تقديم خدمة عملاء ممتازة. يعمل فريقنا المدرب على ضمان راحتك واستمتاعك بتجربة تناول الطعام لدينا.'"
+  [sectionDescColor]="'#565450'" [customFontClass]="true">
+  <span working>
+    <app-working-hours [customClass]="true"></app-working-hours>
+  </span>
+</app-custom-section>
+
+<app-bg-div [sectionBackgroundImg]="'/assets/about/about-2.webp'"></app-bg-div>
+<app-testimonials></app-testimonials>

@@ -1,0 +1,70 @@
+h3,
+.person-kilo {
+  font-size: 25px;
+  color: var(--Main-Brand-Color);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 30px;
+  color: var(--Main-Brand-Color);
+  font-weight: 800;
+}
+
+.calories {
+  font-size: 16px;
+  text-decoration: underline;
+  color: var(--Main-Brand-Color);
+}
+
+.menu-border {
+  border-right: 1px solid var(--Main-Brand-Color);
+  border-left: 1px solid var(--Main-Brand-Color);
+}
+@media (min-width: 992px) and (max-width: 1400px) {
+  h3,
+  .person-kilo {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 992px) {
+  h2 {
+    font-size: 20px;
+  }
+  h3,
+  .person-kilo {
+    font-size: 16px;
+  }
+
+  .menu-border {
+    border-left: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-border {
+    border-top: 1px solid var(--Main-Brand-Color);
+    border-bottom: 1px solid var(--Main-Brand-Color);
+    border-right: none;
+    border-left: none;
+  }
+
+  h3,
+  .person-kilo {
+    font-size: 15px;
+    color: var(--Main-Brand-Color);
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .calories {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,47 @@
+.text-wrapper {
+  background-color: var(--Main-Brand-Color);
+  color: white;
+}
+
+#infiniteSlider h3 {
+  white-space: nowrap;
+  padding: 1rem 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: move-rtl 6000ms linear infinite;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.text-wrapper:hover h3 {
+  animation-play-state: paused;
+}
+
+@keyframes move-rtl {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 992px) {
+  #infiniteSlider h3 {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #infiniteSlider h3 {
+    font-size: 15px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1476px) {
+  #infiniteSlider h3 {
+    font-size: 20px;
+  }
+}

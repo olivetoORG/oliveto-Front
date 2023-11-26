@@ -1,0 +1,66 @@
+#menuSection .menu-title h2 {
+  font-weight: 700 !important;
+  font-size: 40px;
+  // color: var(--Main-Brand-Color);
+}
+
+#menuSection .person-kilo,
+#menuSection h3 {
+  // color: var(--Main-Brand-Color);
+  font-weight: 800 !important;
+  font-size: 20px;
+}
+.normal-section {
+  color: var(--Main-Brand-Color);
+}
+.diff-menu-section {
+  background-color: var(--Main-Sec-Brand-Color);
+  color: var(--Text-Color) !important;
+}
+
+.calories {
+  text-decoration: underline;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #menuSection .person-kilo,
+  #menuSection h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  #menuSection .menu-title h2 {
+    font-size: 30px;
+  }
+  #menuSection .img-fluid {
+    width: 15% !important;
+  }
+
+  #menuSection .person-kilo,
+  #menuSection h3 {
+    font-size: 22px;
+  }
+
+  #menuSection .calories {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  #menuSection .menu-title h2 {
+    font-size: 25px;
+  }
+  #menuSection .img-fluid {
+    width: 15% !important;
+  }
+
+  #menuSection .person-kilo,
+  #menuSection h3 {
+    font-size: 14px;
+  }
+
+  #menuSection .calories {
+    font-size: 10px;
+  }
+}

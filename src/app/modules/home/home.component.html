@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<app-infinite-slider></app-infinite-slider>
+
+<app-custom-section [imgsrc]="'assets/home/home-photo1.webp'" [sectionTitle]="'تذوق التراث الغني!'"
+  [sectionDesc]="'قائمتنا مليئة بالأطباق المميزة التي تجسد التراث الغني للمأكولات السورية. ستجد لدينا تشكيلة واسعة من المقبلات اللذيذة مثل المتبل والحمص والفتوش، وأطباق رئيسية شهية مثل الشاورما والكباب. نحرص على استخدام المكونات الطازجة والتوابل الأصيلة لنقدم لكم أفضل نكهة وجودة ممكنة.'">
+  <span button class="text-right">
+    <app-border-button [buttonName]="'تعرف علي أطباقنا'" (routerLinkAction)="navigateTo()"></app-border-button>
+  </span>
+</app-custom-section>
+
+<app-custom-second-section [sectionTitle]="'ساعات العمل'" [imgsrc]="'assets/home/home-photo3.webp'"
+  [sectionTitle]="'ساعات العمل'"
+  [sectionDesc]="'نحرص على تقديم خدمة عملاء ممتازة. يعمل فريقنا المدرب على ضمان راحتك واستمتاعك بتجربة تناول الطعام لدينا.'"
+  [sectionDescColor]="'#fff'" [sectionTitleColor]="'#fff'" [sectionBackgroundColor]="'#E65E25'"
+  [customFontClass]="true">
+  <span working>
+    <app-working-hours [sectionDescColor]="'#fff'"></app-working-hours>
+  </span>
+</app-custom-second-section>
+
+<app-menu-carousel></app-menu-carousel>
+
+<app-menu-table></app-menu-table>
+
+<app-custom-section [imgsrc]="'assets/home/home-photo2.webp'" [sectionTitle]="'خبرائنا'"
+  [sectionDesc]="'فريقنا المحترف من الطهاة الماهرين يعمل بكل اهتمام وحرفية لإعداد الأطباق بأعلى مستويات الجودة. نحن نهتم بتقديم تجربة طعام استثنائية، حيث يمكنكم التمتع بالأطباق اللذيذة في أجواء مريحة وودية.بالإضافة إلى ذلك، نحرص على تقديم خدمة عملاء ممتازة. يعمل فريقنا المدرب على ضمان راحتك واستمتاعك بتجربة تناول الطعام لدينا. نحن نهدف إلى تلبية جميع توقعاتك وتقديم تجربة لا تُنسى وتستحق العودة مرارًا وتكرارًا.'">
+
+</app-custom-section>
+
+<app-testimonials></app-testimonials>

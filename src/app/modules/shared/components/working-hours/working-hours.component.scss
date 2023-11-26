@@ -1,0 +1,31 @@
+.gray.working-hours-content {
+  border-top: 3px solid var(--Second-Border-Color);
+  border-bottom: 3px solid var(--Second-Border-Color);
+}
+.white.working-hours-content {
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+.working-hours-content h3 {
+  color: #565450;
+  font-weight: 800;
+  font-size: 26px;
+}
+
+@media (min-width: 992px) and (max-width: 1360px) {
+  .working-hours-content h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .working-hours-content h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .working-hours-content h3 {
+    font-size: 14px;
+  }
+}

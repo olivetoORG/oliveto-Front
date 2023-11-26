@@ -1,0 +1,15 @@
+<section id="gallery" class="section-padding">
+  <app-section-title [title]="'الألبوم'" [sectionTitleClass]="true" [sectionTitleClass]="true"></app-section-title>
+
+  <div class="container">
+    <div class="row justify-content-start align-items-center">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-4 text-center mb-4" *ngFor="let image of galleryList; let i=index">
+        <div class="img-container" >
+        <img [src]="image.image" (click)="open(i)" class="w-auto img-thumb" alt="مطعم أوليفيتو ظهرة لبن"
+          loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

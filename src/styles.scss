@@ -1,0 +1,167 @@
+@import url("assets/css/global.scss");
+// @font-face {
+//   font-family: "Cairo";
+//   src: url("assets/fonts/Cairo-Regular.ttf") format("truetype");
+// }
+
+@font-face {
+  font-family: "Cairo";
+  src: url("assets/fonts/Cairo-VariableFont_slnt,wght.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("assets/main-background.png");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section-padding {
+  padding-top: 110px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 992px) and (max-width: 1366px) {
+  .owl-theme .owl-nav [class*="owl-"] {
+    font-size: 15px !important;
+    padding: 12px !important;
+    width: 50px !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-padding {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+
+  // menu-carousel owl theme style
+  .owl-theme .owl-nav {
+    margin-top: 10px;
+    width: 20rem;
+  }
+
+  .owl-theme .owl-nav {
+    width: 15rem !important;
+  }
+
+  .owl-theme .owl-nav [class*="owl-"] {
+    font-size: 15px !important;
+    padding: 7px !important;
+    width: 40px !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-padding {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  // menu-carousel owl theme style
+  .owl-dots {
+    display: none;
+  }
+
+  .owl-theme .owl-nav {
+    width: 15rem !important;
+  }
+
+  .owl-theme .owl-nav [class*="owl-"] {
+    font-size: 15px !important;
+    padding: 7px !important;
+    width: 40px !important;
+  }
+}
+
+// gallery ngx-lightbox container
+.lb-outerContainer {
+  background-color: transparent !important;
+}
+
+// menu-carousel owl theme style
+.owl-theme .owl-nav [class*="owl-"] {
+  color: var(--Main-Brand-Color);
+  font-size: 20px;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 13px;
+  width: 60px;
+  border: 1px solid var(--Main-Brand-Color);
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 0px;
+  margin-left: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: var(--Main-Sec-Brand-Color) !important;
+  color: var(--Text-Color);
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: var(--Main-Sec-Brand-Color);
+  color: var(--Text-Color);
+  text-decoration: none;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 20px;
+  height: 20px;
+  margin: 5px 7px;
+  background: transparent !important;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 0.2s ease;
+  border: 2px solid var(--Main-Sec-Brand-Color);
+}
+
+.owl-carousel {
+  position: relative;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 5px;
+  left: 25%;
+  right: 25%;
+}
+
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  width: 23rem;
+
+  .btn-check:checked + .btn,
+  .btn.active,
+  .btn.show,
+  .btn:first-child:active,
+  :not(.btn-check) + .btn:active {
+    border: none !important;
+  }
+
+
+}
+.modal {
+  --bs-modal-bg: transparent !important;
+  --bs-modal-border-color: transparent !important ;
+}

@@ -1,0 +1,92 @@
+.menu-carousel .item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu-carousel .caption {
+  position: absolute;
+  bottom: -50px;
+  left: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.3s;
+  padding: 50px;
+  backdrop-filter: blur(5px);
+}
+
+.menu-carousel .item:hover .caption {
+  opacity: 1;
+  bottom: 15px;
+}
+
+.menu-carousel .item:focus .caption {
+  opacity: 1;
+  bottom: 15px;
+}
+
+.item-img {
+  transition: all 0.4s;
+}
+
+.item:hover .item-img {
+  scale: 1.06;
+  cursor: pointer;
+  filter: blur(2.5px);
+}
+
+
+
+@media (max-width: 992px) {
+  .menu-carousel .caption {
+    padding: 20px;
+  }
+
+  .menu-carousel .caption h3 {
+    font-size: 20px !important;
+  }
+
+  .menu-carousel .caption p {
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-carousel .caption {
+    padding: 15px;
+  }
+
+  .menu-carousel .caption h3 {
+    font-size: 16px !important;
+  }
+
+  .menu-carousel .caption p {
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+// .item .caption {
+// 	height: 100%;
+// 	background: rgba(0, 0, 0, 0.268);
+// 	backdrop-filter: blur(5px);
+// 	transition: 0.3s;
+// 	opacity: 0;
+// 	color: #fff;
+// }
+// .carousel-button {
+//   color: var(--Main-Brand-Color);
+//   font-size: 20px;
+//   margin: 5px;
+//   display: inline-block;
+//   cursor: pointer;
+//   background-color: transparent;
+//   padding: 5px;
+//   width: 42px;
+//   border: 1px solid var(--Main-Brand-Color);
+//   border-radius: 50%;
+//   text-align: center;
+//   margin-right: 68px;
+//   margin-left: 68px;
+// }

@@ -1,0 +1,45 @@
+<section class="pt-5 pb-5">
+  <div class="container">
+    <div id="carouselExampleCaptions" class="carousel slide " style="background-color: transparent !important; ">
+      <div class="carousel-inner">
+        <div *ngFor="let item of carouselItems ; let i = index" class="carousel-item" [class.active]="i === 0">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-7">
+              <div class="testimonial-container">
+                <div class="client-info">
+                  <p class="sec-text-color text-center m-0 fs-5">
+                    {{ item.name }}
+                  </p>
+                  <p class="main-color text-center ">
+                    From {{ item.location }}
+                  </p>
+                </div>
+                <div class="client-testimonal ">
+                  <p class="main-color testimon-text text-center lead font-italic">
+                    {{ item.content }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <img src="assets/Testimonials/quote.svg" class="quote-svg quote-svg-one" alt="مطعم أوليفيتو ظهرة لبن">
+        <img src="assets/Testimonials/quote.svg" class="quote-svg quote-svg-position quote-svg-two"
+          alt="مطعم أوليفيتو ظهرة لبن">
+      </div>
+
+      <div class="carousel-buttons d-flex justify-content-center">
+        <button class="mx-4 carousel-button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="mx-4 carousel-button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+</section>

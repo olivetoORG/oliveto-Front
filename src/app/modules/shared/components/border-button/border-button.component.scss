@@ -1,0 +1,65 @@
+.btn-3,
+.btn-3::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-3 {
+  background: none;
+  border-radius: 5px;
+  color: var(--Main-Brand-Color);
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 1em;
+  padding: 2em 6em;
+  position: relative;
+  text-transform: uppercase;
+  border-top: 1px solid var(--Main-Brand-Color) !important;
+  border-bottom: 1px solid var(--Main-Brand-Color) !important;
+  border-radius: 0 !important;
+  font-size: 20px;
+}
+
+.btn-3::before,
+.btn-3::after {
+  background: var(--Main-Brand-Color);
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.btn-3:hover {
+  color: #FFF;
+}
+
+.btn-3::after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+
+.btn-3:hover:after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .border-btn {
+    font-size: 18px;
+  }
+  .btn-3{
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .border-btn {
+    font-size: 12px;
+  }
+}

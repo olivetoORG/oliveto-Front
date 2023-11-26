@@ -1,0 +1,15 @@
+.contact-location li {
+  font-size: 25px;
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 767px) {
+  .contact-location li {
+    font-size: 18px;
+  }
+}

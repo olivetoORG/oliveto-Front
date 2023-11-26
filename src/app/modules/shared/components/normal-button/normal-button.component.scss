@@ -1,0 +1,16 @@
+.normal-btn {
+  border-radius: 0 !important;
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .normal-btn {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .normal-btn {
+    font-size: 12px;
+  }
+}
