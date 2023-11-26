@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class MainServiceService {
   constructor(private http: HttpClient) {}
 
-  baseUrl: any = 'https://oliveto-ksa.com/api';
+  baseUrl: any = 'https://dashboard.oliveto-ksa.com/api';
 
   getAllCategories() {
     return this.http.get<any>(`${this.baseUrl}/categories`);
@@ -20,6 +20,10 @@ export class MainServiceService {
 
   getAllGalleries() {
     return this.http.get<any>(`${this.baseUrl}/galleries`);
+  }
+
+  getBanner() {
+    return this.http.get<any>(`${this.baseUrl}/banners`);
   }
 
   sendContactData(data: any): Observable<any> {
