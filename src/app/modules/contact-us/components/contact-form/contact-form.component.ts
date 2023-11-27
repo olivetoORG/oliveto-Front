@@ -49,49 +49,51 @@ export class ContactFormComponent {
   public get message() {
     return this.contactForm.get('message');
   }
-
-  // onFileSelected(event: any): void {
-  //   const file = event.target.files[0] as File;
-  //   if (this.isFileExtensionAllowed(file)) {
-  //     this.selectedFile = file;
-  //     this.contactForm.patchValue({
-  //       file: this.selectedFile,
-  //     });
-  //   } else {
-  //     // Display an error message to the user or prevent further action
-  //     this.toasterService.error(
-  //       'الرجاء إرفاق الملف بالإمتدادات المسموح بها مثل "jpg , jpeg , png , heic"',
-  //       'خطأ',
-  //       {
-  //         tapToDismiss: false,
-  //         positionClass: 'toast-top-left',
-  //       }
-  //     );
-  //     this.clearFileInput();
-  //   }
-  // }
+  public get file() {
+    return this.contactForm.get('file');
+  }
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     const file = input.files && input.files.length > 0 ? input.files[0] : null;
 
     if (file && this.isFileExtensionAllowed(file)) {
-      this.selectedFile = file;
-      this.contactForm.patchValue({
-        file: this.selectedFile,
-      });
+      this.mainService
+        .convertFileToBinary(file)
+        .then((binaryData: ArrayBuffer) => {
+          // Use the binary data as needed
+          console.log('Binary data:', binaryData);
+
+          this.selectedFile = file;
+          this.contactForm.patchValue({
+            file: this.selectedFile,
+          });
+        })
+        .catch((error) => {
+          console.error('Error converting file to binary:', error);
+          this.selectedFile = null;
+          this.toasterService.error(
+            'Error converting file to binary. Please try again.',
+            'خطأ',
+            {
+              tapToDismiss: false,
+              positionClass: 'toast-top-left',
+            }
+          );
+          this.clearFileInput();
+        });
     } else {
       this.selectedFile = null;
       this.toasterService.error(
         'الرجاء إرفاق الملف بالإمتدادات المسموح بها مثل "jpg , jpeg , png , heic"',
-        'خطأ',
+        'خطأ',
         {
           tapToDismiss: false,
           positionClass: 'toast-top-left',
         }
       );
-      this.clearFileInput();
     }
+    this.clearFileInput();
   }
 
   private isFileExtensionAllowed(file: File): boolean {
@@ -137,5 +139,32 @@ export class ContactFormComponent {
       );
     }
     // console.log(contactInfo.value);
+  }
+  processFile(file: File) {
+    if (file) {
+      this.selectedFile = file;
+      this.uploadFile(file);
+    }
+  }
+
+  uploadFile(file: File) {
+    const fileSize = file.size;
+    let uploadedBytes = 0;
+    const chunkSize = fileSize / 4;
+    const totalChunks = Math.ceil(fileSize / chunkSize);
+
+    const uploadChunk = (start: number, end: number) => {
+      const chunk = file.slice(start, end);
+      setTimeout(() => {
+        uploadedBytes += chunk.size;
+        if (end < fileSize) {
+          uploadChunk(end, end + chunkSize);
+        } else {
+          this.file?.setValue(file);
+        }
+      }, 500);
+    };
+
+    uploadChunk(0, chunkSize);
   }
 }

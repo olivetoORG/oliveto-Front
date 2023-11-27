@@ -59,8 +59,8 @@
         <div style="" class="file-label">
           <label for="file" class="custom-file-upload">
             إرفاق ملف
-            <input type="file" class="form-control" id="file" name="file" placeholder="إرفاق ملف" aria-label="إرفاق ملف"
-              formControlName="file" dir="rtl" accept=".jpg, .jpeg, .png , .heic" (change)="onFileSelected($event)" />
+            <input name="file" type="file" dir="rtl" style="display: none" id="file" accept=".jpg, .jpeg, .png , .heic"
+              (change)="onFileSelected($event)" aria-label="إرسال ملف" placeholder="إرفاق ملف" />
             <i class="fa-solid fa-upload me-1"></i>
           </label>
         </div>

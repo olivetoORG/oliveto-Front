@@ -26,6 +26,23 @@ export class MainServiceService {
     return this.http.get<any>(`${this.baseUrl}/banners`);
   }
 
+  convertFileToBinary(file: File): Promise<ArrayBuffer> {
+    return new Promise<ArrayBuffer>((resolve, reject) => {
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        if (reader.result instanceof ArrayBuffer) {
+          resolve(reader.result);
+        } else {
+          reject(new Error('Failed to read file as ArrayBuffer.'));
+        }
+      };
+
+      reader.onerror = (error) => reject(error);
+      reader.readAsArrayBuffer(file);
+    });
+  }
+
   sendContactData(data: any): Observable<any> {
     let formData = new FormData();
     formData.append('name', data.name);
