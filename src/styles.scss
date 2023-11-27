@@ -101,7 +101,7 @@ html {
 .owl-theme .owl-nav [class*="owl-"] {
   color: var(--Main-Brand-Color);
   font-size: 20px;
-  margin: 5px;
+  margin: 3px;
   display: inline-block;
   cursor: pointer;
   background-color: transparent;
@@ -166,6 +166,7 @@ html {
 
 .owl-theme .owl-nav .owl-next {
   background-color: #FFF;
+  margin-left: 0;
 }
 
 .modal {
