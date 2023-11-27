@@ -62,7 +62,7 @@ export class ContactFormComponent {
         .convertFileToBinary(file)
         .then((binaryData: ArrayBuffer) => {
           // Use the binary data as needed
-          console.log('Binary data:', binaryData);
+          // console.log('Binary data:', binaryData);
 
           this.selectedFile = file;
           this.contactForm.patchValue({
