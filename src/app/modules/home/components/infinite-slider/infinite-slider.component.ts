@@ -17,7 +17,7 @@ export class InfiniteSliderComponent {
           if (res) {
             this.bannerData = res?.data;
             resolve(true);
-            console.log(this.bannerData);
+            // console.log(this.bannerData);
           }
         },
         error: (error) => {},
